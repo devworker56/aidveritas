@@ -50,14 +50,24 @@ body {
 .main-banner {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
     color: white;
-    padding: 4rem 0;
-    min-height: 50vh;
+    padding: 2rem 0; /* Reduced from 4rem to make it half height */
+    min-height: 25vh; /* Reduced from 50vh to make it half height */
+    display: flex;
+    align-items: center;
+}
+
+/* Apply same banner color to all page headers */
+.page-header-banner {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 2rem 0;
+    min-height: 25vh;
     display: flex;
     align-items: center;
 }
 
 .min-vh-50 {
-    min-height: 50vh;
+    min-height: 25vh; /* Updated to match new banner height */
 }
 
 /* Cards */
@@ -137,11 +147,11 @@ body {
     border-radius: 0.375rem;
 }
 
-/* Footer - Half Height */
+/* Footer - Half Height with Banner Color */
 .footer {
-    background-color: var(--gray-900);
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%); /* Same as banner */
     color: white;
-    padding: 2rem 0;
+    padding: 1rem 0; /* Reduced from 2rem to make it half height */
 }
 
 .footer h5 {
@@ -275,8 +285,13 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
     .main-banner {
-        padding: 2rem 0;
-        min-height: 40vh;
+        padding: 1rem 0; /* Further reduced for mobile */
+        min-height: 20vh; /* Further reduced for mobile */
+    }
+    
+    .page-header-banner {
+        padding: 1rem 0;
+        min-height: 20vh;
     }
     
     .navbar-nav .nav-link {
@@ -285,6 +300,10 @@ body {
     
     .auth-container {
         padding: 1rem;
+    }
+    
+    .footer {
+        padding: 0.5rem 0; /* Further reduced for mobile */
     }
 }
 
@@ -308,4 +327,18 @@ body {
     padding: 1rem;
     text-align: center;
     background: rgba(16, 185, 129, 0.05);
+}
+
+/* Make sure all primary elements use the same color scheme */
+.card-header.bg-primary {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%) !important;
+}
+
+.sidebar .nav-link.active {
+    background-color: var(--primary-blue) !important;
+    border-left-color: var(--primary-blue) !important;
+}
+
+.stat-card {
+    border-left: 4px solid var(--primary-blue);
 }

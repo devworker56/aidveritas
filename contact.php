@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php include 'includes/header.php'; ?>
 
     <!-- Page Header -->
-    <section class="bg-primary text-white py-5">
+    <section class="page-header-banner">
         <div class="container">
             <div class="row">
                 <div class="col">
