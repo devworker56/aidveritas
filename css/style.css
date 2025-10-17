@@ -56,7 +56,7 @@ body {
     align-items: center;
 }
 
-/* Apply same banner color to all page headers */
+/* Page Header Banner - Same as home banner but for other pages */
 .page-header-banner {
     background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark) 100%);
     color: white;
