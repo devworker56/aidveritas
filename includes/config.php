@@ -49,7 +49,37 @@ spl_autoload_register(function ($class_name) {
         require_once $file;
     }
 });
+// Set language
+session_start(); // Make sure this is at the top
 
+$current_language = DEFAULT_LANGUAGE;
+
+// Check for language change request
+if (isset($_GET['lang']) && in_array($_GET['lang'], SUPPORTED_LANGUAGES)) {
+    $current_language = $_GET['lang'];
+    $_SESSION['language'] = $current_language;
+} 
+// Check for existing session language
+elseif (isset($_SESSION['language']) && in_array($_SESSION['language'], SUPPORTED_LANGUAGES)) {
+    $current_language = $_SESSION['language'];
+}
+// Fallback to default
+else {
+    $current_language = DEFAULT_LANGUAGE;
+    $_SESSION['language'] = $current_language;
+}
+
+// Language strings
+$lang = [];
+$lang_file = __DIR__ . "/../languages/{$current_language}.php";
+
+if (file_exists($lang_file)) {
+    require_once $lang_file;
+} else {
+    // Fallback to default language file
+    require_once __DIR__ . "/../languages/" . DEFAULT_LANGUAGE . ".php";
+}
+/*
 // Set language
 $current_language = DEFAULT_LANGUAGE;
 if (isset($_GET['lang']) && in_array($_GET['lang'], SUPPORTED_LANGUAGES)) {
@@ -63,3 +93,4 @@ if (isset($_GET['lang']) && in_array($_GET['lang'], SUPPORTED_LANGUAGES)) {
 $lang = [];
 require_once __DIR__ . "/../languages/{$current_language}.php";
 ?>
+*/
