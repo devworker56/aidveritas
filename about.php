@@ -20,16 +20,16 @@ $current_page = 'about';
     <?php include 'includes/header.php'; ?>
 
     <!-- Page Header -->
-    <section class="page-header-banner">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1 class="display-4 fw-bold"><?php echo $lang['about_title']; ?></h1>
-                    <p class="lead"><?php echo $lang['mission']; ?>: Révolutionner la transparence des dons physiques</p>
-                </div>
+<section class="page-header-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-4 fw-bold"><?php echo $lang['about_title']; ?></h1>
+                <p class="lead"><?php echo $lang['mission']; ?>: Revolutionizing transparency in physical donations</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Mission Section -->
     <section class="py-5">

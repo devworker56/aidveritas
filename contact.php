@@ -44,16 +44,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php include 'includes/header.php'; ?>
 
     <!-- Page Header -->
-    <section class="page-header-banner">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1 class="display-4 fw-bold"><?php echo $lang['contact_title']; ?></h1>
-                    <p class="lead">Nous sommes là pour vous aider. Contactez-nous pour toute question.</p>
-                </div>
+<section class="page-header-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-4 fw-bold"><?php echo $lang['contact_title']; ?></h1>
+                <p class="lead"><?php echo $lang['contact_info']; ?></p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Contact Form -->
     <section class="py-5">

@@ -61,5 +61,11 @@ $lang = [
     'mission' => 'Our Mission',
     'vision' => 'Our Vision',
     'team' => 'Our Team',
+    
+    // Add these missing translations for page content:
+    'about_mission_text' => 'AidVeritas was created to solve a fundamental problem in the charitable ecosystem: the opacity of traditional physical donations.',
+    'about_vision_text' => 'Our platform transforms anonymous coin donations into verifiable, attributed digital transactions, ensuring every donor receives recognition and tax benefits.',
+    'contact_info' => 'We\'re here to help. Contact us with any questions.',
+    'resources_description' => 'Guides, documentation and resources for using AidVeritas',
 ];
 ?>

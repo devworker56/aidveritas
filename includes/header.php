@@ -59,8 +59,8 @@
                             <?php echo strtoupper($current_language); ?>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="?lang=fr">Français (FR)</a></li>
-                            <li><a class="dropdown-item" href="?lang=en">English (EN)</a></li>
+                            <li><a class="dropdown-item" href="?lang=fr&redirect=<?php echo urlencode($_SERVER['REQUEST_URI']); ?>">Français (FR)</a></li>
+                            <li><a class="dropdown-item" href="?lang=en&redirect=<?php echo urlencode($_SERVER['REQUEST_URI']); ?>">English (EN)</a></li>
                         </ul>
                     </div>
 
