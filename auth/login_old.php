@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST['password'];
     
     if (empty($email) || empty($password)) {
-        $error_message = $current_language === 'fr' ? 'Veuillez saisir votre email et mot de passe.' : 'Please enter both email and password.';
+        $error_message = 'Please enter both email and password.';
     } else {
         $db = new Database();
         $conn = $db->getConnection();
@@ -51,13 +51,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                     exit;
                 } else {
-                    $error_message = $current_language === 'fr' ? 'Veuillez vérifier votre adresse email avant de vous connecter.' : 'Please verify your email address before logging in.';
+                    $error_message = 'Please verify your email address before logging in.';
                 }
             } else {
-                $error_message = $current_language === 'fr' ? 'Email ou mot de passe invalide.' : 'Invalid email or password.';
+                $error_message = 'Invalid email or password.';
             }
         } else {
-            $error_message = $current_language === 'fr' ? 'Erreur de connexion à la base de données. Veuillez réessayer.' : 'Database connection error. Please try again.';
+            $error_message = 'Database connection error. Please try again.';
         }
     }
 }
@@ -74,18 +74,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
-    <?php include '../includes/header.php'; ?>
-
     <div class="auth-container">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-5">
                     <div class="auth-card">
                         <div class="auth-header">
-                            <h2 class="fw-bold mb-2"><?php echo $page_title; ?></h2>
-                            <p class="mb-0">
-                                <?php echo $current_language === 'fr' ? 'Connectez-vous à votre compte AidVeritas' : 'Sign in to your AidVeritas account'; ?>
-                            </p>
+                            <h2 class="fw-bold mb-2"><?php echo $lang['login']; ?></h2>
+                            <p class="mb-0">Connectez-vous à votre compte AidVeritas</p>
                         </div>
                         <div class="card-body p-4">
                             <?php if ($error_message): ?>
@@ -116,9 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 
                                 <div class="mb-3 form-check">
                                     <input type="checkbox" class="form-check-input" id="remember">
-                                    <label class="form-check-label" for="remember">
-                                        <?php echo $current_language === 'fr' ? 'Se souvenir de moi' : 'Remember me'; ?>
-                                    </label>
+                                    <label class="form-check-label" for="remember">Se souvenir de moi</label>
                                 </div>
                                 
                                 <div class="d-grid mb-3">
@@ -142,22 +136,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <a href="register.php" class="text-decoration-none fw-bold"><?php echo $lang['register']; ?></a>
                                 </p>
                             </div>
-
-                            <!-- Add a home link -->
-                            <div class="text-center mt-3">
-                                <a href="../index.php" class="text-decoration-none">
-                                    <i class="fas fa-arrow-left me-1"></i>
-                                    <?php echo $current_language === 'fr' ? 'Retour à l\'accueil' : 'Back to Home'; ?>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <?php include '../includes/footer.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

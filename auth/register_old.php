@@ -31,11 +31,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     // Validation
     if (empty($legal_name) || empty($email) || empty($password) || empty($confirm_password)) {
-        $error_message = $current_language === 'fr' ? 'Veuillez remplir tous les champs obligatoires.' : 'Please fill in all required fields.';
+        $error_message = 'Please fill in all required fields.';
     } elseif ($password !== $confirm_password) {
-        $error_message = $current_language === 'fr' ? 'Les mots de passe ne correspondent pas.' : 'Passwords do not match.';
+        $error_message = 'Passwords do not match.';
     } elseif (strlen($password) < 8) {
-        $error_message = $current_language === 'fr' ? 'Le mot de passe doit contenir au moins 8 caractères.' : 'Password must be at least 8 characters long.';
+        $error_message = 'Password must be at least 8 characters long.';
     } else {
         $db = new Database();
         $conn = $db->getConnection();
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->execute([$email]);
             
             if ($stmt->fetch()) {
-                $error_message = $current_language === 'fr' ? 'Cette adresse email est déjà enregistrée.' : 'Email address is already registered.';
+                $error_message = 'Email address is already registered.';
             } else {
                 // Insert user
                 $password_hash = password_hash($password, PASSWORD_DEFAULT);
@@ -73,22 +73,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         ");
                         $stmt->execute([$user_id, $legal_name, $legal_name, $charity_bn, $charity_description, $charity_website]);
                         
-                        $success_message = $current_language === 'fr' ? 
-                            'Merci pour votre inscription ! Votre demande d\'organisme de bienfaisance est en cours d\'examen. Vous serez informé une fois approuvé.' : 
-                            'Thank you for registering! Your charity application is under review. You will be notified once approved.';
+                        $success_message = 'Thank you for registering! Your charity application is under review. You will be notified once approved.';
                     } else {
-                        $success_message = $current_language === 'fr' ? 
-                            'Inscription réussie ! Vous pouvez maintenant vous connecter à votre compte.' : 
-                            'Registration successful! You can now log in to your account.';
+                        $success_message = 'Registration successful! You can now log in to your account.';
                     }
                     
                     $_POST = []; // Clear form
                 } else {
-                    $error_message = $current_language === 'fr' ? 'L\'inscription a échoué. Veuillez réessayer.' : 'Registration failed. Please try again.';
+                    $error_message = 'Registration failed. Please try again.';
                 }
             }
         } else {
-            $error_message = $current_language === 'fr' ? 'Erreur de connexion à la base de données. Veuillez réessayer.' : 'Database connection error. Please try again.';
+            $error_message = 'Database connection error. Please try again.';
         }
     }
 }
@@ -105,18 +101,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
-    <?php include '../includes/header.php'; ?>
-
     <div class="auth-container">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-7">
                     <div class="auth-card">
                         <div class="auth-header">
-                            <h2 class="fw-bold mb-2"><?php echo $page_title; ?></h2>
-                            <p class="mb-0">
-                                <?php echo $current_language === 'fr' ? 'Créez votre compte AidVeritas' : 'Create your AidVeritas account'; ?>
-                            </p>
+                            <h2 class="fw-bold mb-2"><?php echo $lang['register']; ?></h2>
+                            <p class="mb-0">Créez votre compte AidVeritas</p>
                         </div>
                         <div class="card-body p-4">
                             <?php if ($success_message): ?>
@@ -139,17 +131,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <!-- User Type Selection -->
                                 <div class="row mb-4">
                                     <div class="col">
-                                        <label class="form-label fw-bold">
-                                            <?php echo $current_language === 'fr' ? 'Je m\'inscris en tant que :' : 'I am registering as:'; ?>
-                                        </label>
+                                        <label class="form-label fw-bold">I am registering as:</label>
                                         <div class="d-flex gap-3">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="user_type" 
                                                        id="donor" value="donor" checked 
                                                        onchange="toggleCharityFields()">
                                                 <label class="form-check-label" for="donor">
-                                                    <i class="fas fa-user me-1"></i>
-                                                    <?php echo $current_language === 'fr' ? 'Donateur' : 'Donor'; ?>
+                                                    <i class="fas fa-user me-1"></i> Donor
                                                 </label>
                                             </div>
                                             <div class="form-check">
@@ -157,8 +146,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                        id="charity" value="charity"
                                                        onchange="toggleCharityFields()">
                                                 <label class="form-check-label" for="charity">
-                                                    <i class="fas fa-heart me-1"></i>
-                                                    <?php echo $current_language === 'fr' ? 'Organisme de bienfaisance' : 'Charity Organization'; ?>
+                                                    <i class="fas fa-heart me-1"></i> Charity Organization
                                                 </label>
                                             </div>
                                         </div>
@@ -201,9 +189,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <div id="charityFields" class="charity-fields" style="display: none;">
                                         <div class="col-12">
                                             <hr>
-                                            <h5 class="text-primary">
-                                                <?php echo $current_language === 'fr' ? 'Informations de l\'organisme' : 'Charity Information'; ?>
-                                            </h5>
+                                            <h5 class="text-primary">Charity Information</h5>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="charity_bn" class="form-label"><?php echo $lang['charity_bn']; ?> *</label>
@@ -225,9 +211,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" id="terms" required>
                                             <label class="form-check-label" for="terms">
-                                                <?php echo $current_language === 'fr' ? 
-                                                    'J\'accepte les <a href="#" class="text-decoration-none">Conditions d\'utilisation</a> et la <a href="#" class="text-decoration-none">Politique de confidentialité</a>' : 
-                                                    'I agree to the <a href="#" class="text-decoration-none">Terms of Service</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>'; ?>
+                                                I agree to the <a href="#" class="text-decoration-none">Terms of Service</a> and <a href="#" class="text-decoration-none">Privacy Policy</a>
                                             </label>
                                         </div>
                                     </div>
@@ -250,22 +234,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <a href="login.php" class="text-decoration-none fw-bold"><?php echo $lang['login']; ?></a>
                                 </p>
                             </div>
-
-                            <!-- Add a home link -->
-                            <div class="text-center mt-3">
-                                <a href="../index.php" class="text-decoration-none">
-                                    <i class="fas fa-arrow-left me-1"></i>
-                                    <?php echo $current_language === 'fr' ? 'Retour à l\'accueil' : 'Back to Home'; ?>
-                                </a>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <?php include '../includes/footer.php'; ?>
 
     <script>
         function toggleCharityFields() {
