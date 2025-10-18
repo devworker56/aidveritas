@@ -55,12 +55,11 @@ $current_language = DEFAULT_LANGUAGE;
 if (isset($_GET['lang']) && in_array($_GET['lang'], SUPPORTED_LANGUAGES)) {
     $current_language = $_GET['lang'];
     $_SESSION['language'] = $current_language;
-    
-    // Handle redirect after language change
-    if (isset($_GET['redirect'])) {
-        header('Location: ' . $_GET['redirect']);
-        exit;
-    }
 } elseif (isset($_SESSION['language'])) {
     $current_language = $_SESSION['language'];
 }
+
+// Language strings
+$lang = [];
+require_once __DIR__ . "/../languages/{$current_language}.php";
+?>
