@@ -49,11 +49,7 @@ $current_page = 'resources';
                                 <li class="mb-2"><i class="fas fa-receipt text-primary me-2"></i>Comprendre vos reçus fiscaux</li>
                                 <li class="mb-2"><i class="fas fa-shield-alt text-primary me-2"></i>Sécurité et confidentialité</li>
                             </ul>
-                            <!-- UPDATED: Redirect to docs.aidveritas.com For Donors section -->
-                            <a href="https://docs.aidveritas.com/section.php?id=1" class="btn btn-outline-primary mt-3" target="_blank">
-                                Voir les guides
-                                <i class="fas fa-external-link-alt ms-2"></i>
-                            </a>
+                            <a href="#" class="btn btn-outline-primary mt-3">Voir les guides</a>
                         </div>
                     </div>
                 </div>
@@ -72,11 +68,7 @@ $current_page = 'resources';
                                 <li class="mb-2"><i class="fas fa-chart-bar text-primary me-2"></i>Analytics et rapports</li>
                                 <li class="mb-2"><i class="fas fa-file-invoice-dollar text-primary me-2"></i>Gestion des reçus</li>
                             </ul>
-                            <!-- UPDATED: Redirect to docs.aidveritas.com For Organizations section -->
-                            <a href="https://docs.aidveritas.com/section.php?id=2" class="btn btn-outline-primary mt-3" target="_blank">
-                                Documentation
-                                <i class="fas fa-external-link-alt ms-2"></i>
-                            </a>
+                            <a href="#" class="btn btn-outline-primary mt-3">Documentation</a>
                         </div>
                     </div>
                 </div>
@@ -95,11 +87,7 @@ $current_page = 'resources';
                                 <li class="mb-2"><i class="fas fa-chart-line text-primary me-2"></i>Rapports RSE</li>
                                 <li class="mb-2"><i class="fas fa-handshake text-primary me-2"></i>Partenariats</li>
                             </ul>
-                            <!-- UPDATED: Redirect to docs.aidveritas.com For Businesses section -->
-                            <a href="https://docs.aidveritas.com/section.php?id=3" class="btn btn-outline-primary mt-3" target="_blank">
-                                Ressources partenaires
-                                <i class="fas fa-external-link-alt ms-2"></i>
-                            </a>
+                            <a href="#" class="btn btn-outline-primary mt-3">Ressources partenaires</a>
                         </div>
                     </div>
                 </div>
@@ -125,12 +113,6 @@ $current_page = 'resources';
                             <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     Le processus est simple : 1) Téléchargez l'application AidVeritas, 2) Scannez le code QR sur le terminal dans un magasin partenaire, 3) Sélectionnez votre organisme de bienfaisance, 4) Insérez votre monnaie. Chaque don est enregistré et vous recevrez un reçu fiscal annuel consolidé.
-                                    <div class="mt-3">
-                                        <a href="https://docs.aidveritas.com/section.php?id=1" class="btn btn-sm btn-outline-primary" target="_blank">
-                                            En savoir plus dans notre documentation
-                                            <i class="fas fa-external-link-alt ms-1"></i>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -145,12 +127,6 @@ $current_page = 'resources';
                             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     Toutes les transactions sont cryptographiquement sécurisées avec l'algorithme SHA-256. Vos informations personnelles sont chiffrées et nous respectons les normes les plus strictes de protection des données. Chaque transaction crée un hachage immuable pour garantir l'intégrité des données.
-                                    <div class="mt-3">
-                                        <a href="https://docs.aidveritas.com/page.php?slug=security-and-privacy" class="btn btn-sm btn-outline-primary" target="_blank">
-                                            Documentation sécurité complète
-                                            <i class="fas fa-external-link-alt ms-1"></i>
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -165,50 +141,7 @@ $current_page = 'resources';
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
                                     Les reçus fiscaux annuels consolidés sont générés automatiquement en février de chaque année pour tous les dons de l'année précédente. Vous recevrez une notification dans l'application et par courriel lorsque votre reçu sera disponible.
-                                    <div class="mt-3">
-                                        <a href="https://docs.aidveritas.com/page.php?slug=understanding-tax-receipts" class="btn btn-sm btn-outline-primary" target="_blank">
-                                            Guide des reçus fiscaux
-                                            <i class="fas fa-external-link-alt ms-1"></i>
-                                        </a>
-                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 4 - New -->
-                        <div class="accordion-item">
-                            <h3 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
-                                    Où puis-je trouver la documentation complète?
-                                </button>
-                            </h3>
-                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">
-                                    Toute notre documentation complète est disponible sur notre portail de documentation dédié. Vous y trouverez des guides détaillés pour les donateurs, les organismes de bienfaisance et les entreprises partenaires.
-                                    <div class="mt-3">
-                                        <a href="https://docs.aidveritas.com" class="btn btn-primary" target="_blank">
-                                            <i class="fas fa-book-open me-2"></i>
-                                            Accéder à la documentation complète
-                                            <i class="fas fa-external-link-alt ms-2"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Documentation CTA -->
-                    <div class="text-center mt-5">
-                        <div class="card border-primary">
-                            <div class="card-body py-4">
-                                <h4 class="text-primary mb-3">Documentation Complète Disponible</h4>
-                                <p class="text-muted mb-4">
-                                    Accédez à notre portail de documentation pour des guides détaillés, tutoriels et ressources complètes.
-                                </p>
-                                <a href="https://docs.aidveritas.com" class="btn btn-primary btn-lg" target="_blank">
-                                    <i class="fas fa-external-link-alt me-2"></i>
-                                    Visiter docs.aidveritas.com
-                                </a>
                             </div>
                         </div>
                     </div>
