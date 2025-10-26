@@ -7,7 +7,7 @@
             <div class="col-lg-4">
                 <h5 class="mb-2"> <!-- Reduced from mb-3 to mb-2 -->
                     <i class="fas fa-shield-alt me-2"></i>
-                    AidVeritas
+                    GestionMicro-Dons
                 </h5>
                 <p class="text-muted small"> <!-- Added small class -->
                     <?php echo $current_language === 'fr' ? 'Transformez votre monnaie en dons vérifiables. Reçus fiscaux consolidés pour chaque donateur.' : 'Transform your change into verifiable donations. Consolidated tax receipts for every donor.'; ?>
@@ -40,8 +40,8 @@
             <div class="col-lg-3 col-md-4">
                 <h5 class="mb-2"><?php echo $lang['contact']; ?></h5> <!-- Reduced from mb-3 to mb-2 -->
                 <ul class="list-unstyled text-muted small"> <!-- Added small class -->
-                    <li class="mb-1"><i class="fas fa-envelope me-2"></i> info@aidveritas.com</li> <!-- Reduced from mb-2 to mb-1 -->
-                    <li class="mb-1"><i class="fas fa-phone me-2"></i> +1 (514) 123-4567</li>
+                    <li class="mb-1"><i class="fas fa-envelope me-2"></i> info@gestionmicro-dons.com</li> <!-- Reduced from mb-2 to mb-1 -->
+                    <li class="mb-1"><i class="fas fa-phone me-2"></i> +1 (438) 836-5224</li>
                     <li class="mb-1"><i class="fas fa-map-marker-alt me-2"></i> Montréal, QC</li>
                 </ul>
             </div>
@@ -49,7 +49,7 @@
         <hr class="my-3 border-secondary"> <!-- Reduced from my-4 to my-3 -->
         <div class="row align-items-center">
             <div class="col-md-6">
-                <p class="text-muted mb-0 small">&copy; <?php echo date('Y'); ?> AidVeritas. <?php echo $current_language === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.'; ?></p> <!-- Added small class -->
+                <p class="text-muted mb-0 small">&copy; <?php echo date('Y'); ?> GestionMicro-Dons. <?php echo $current_language === 'fr' ? 'Tous droits réservés.' : 'All rights reserved.'; ?></p> <!-- Added small class -->
             </div>
             <div class="col-md-6 text-md-end">
                 <span class="security-badge small"> <!-- Added small class -->

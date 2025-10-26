@@ -42,11 +42,11 @@ if ($conn) {
         <div class="container">
             <div class="row align-items-center min-vh-50">
                 <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold text-primary mb-4">GestionMicro-Dons</h1>
+                    <h1 class="display-4 fw-bold text-primary mb-4">AidVeritas</h1>
                     <?php if ($current_language === 'fr'): ?>
-                        <p class="lead mb-4">GestionMicro-Dons transforme votre monnaie en dons vérifiables. Nous consolidons vos dons annuels en un seul reçu fiscal, vous permettant de réclamer votre crédit, tout en garantissant que les organismes de bienfaisance reçoivent un soutien entièrement attribué et de confiance.</p>
+                        <p class="lead mb-4">AidVeritas transforme votre monnaie en dons vérifiables. Nous consolidons vos dons annuels en un seul reçu fiscal, vous permettant de réclamer votre crédit, tout en garantissant que les organismes de bienfaisance reçoivent un soutien entièrement attribué et de confiance.</p>
                     <?php else: ?>
-                        <p class="lead mb-4">GestionMicro-Dons turns your spare change into verifiable donations. We consolidate your annual giving into a single tax receipt, so you can claim your credit, while ensuring charities receive fully attributed, trusted support.</p>
+                        <p class="lead mb-4">AidVeritas turns your spare change into verifiable donations. We consolidate your annual giving into a single tax receipt, so you can claim your credit, while ensuring charities receive fully attributed, trusted support.</p>
                     <?php endif; ?>
                     <div class="d-flex gap-3 flex-wrap">
                         <a href="#how-it-works" class="btn btn-primary btn-lg">
@@ -60,7 +60,7 @@ if ($conn) {
                     </div>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <img src="assets/images/donation-terminal.svg" alt="GestionMicro-Dons Terminal" class="img-fluid" style="max-height: 400px;">
+                    <img src="assets/images/donation-terminal.svg" alt="AidVeritas Terminal" class="img-fluid" style="max-height: 400px;">
                 </div>
             </div>
         </div>

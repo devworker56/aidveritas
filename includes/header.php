@@ -7,7 +7,7 @@
             <!-- Logo -->
             <a class="navbar-brand fw-bold text-primary" href="index.php">
                 <i class="fas fa-shield-alt me-2"></i>
-                AidVeritas
+                GestionMicro-Dons
             </a>
 
             <!-- Mobile Toggle -->
